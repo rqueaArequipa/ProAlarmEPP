@@ -1,10 +1,13 @@
-from rest_framework import routers
-from .api import MachineryViewSet, PersonViewSet, UserViewSet
+from rest_framework.routers import DefaultRouter
+from .views import MachineryViewSet, PersonViewSet, UserViewSet, AlertViewSet
+from django.urls import path, include
 
-router = routers.DefaultRouter()
+router = DefaultRouter()
 
-router.register('api/machinery', MachineryViewSet, 'machinery')
-router.register('api/person', PersonViewSet, 'person')
-router.register('api/user', UserViewSet, 'user')
-
-urlpatterns = router.urls
+router.register('machinery', MachineryViewSet, 'machinery')
+router.register('person', PersonViewSet, 'person')
+router.register('user', UserViewSet, 'user')
+router.register('Alert', AlertViewSet, 'alert')
+urlpatterns = [
+    path('',include(router.urls))
+]

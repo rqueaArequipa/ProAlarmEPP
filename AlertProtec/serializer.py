@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Machinery, Person, User
+from .models import Machinery, Person, User, Alert
 
 class MachinerySerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,4 +15,8 @@ class PersonSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
+        fields = '__all__'
+class AlertSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Alert
         fields = '__all__'

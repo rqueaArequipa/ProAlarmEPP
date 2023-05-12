@@ -38,6 +38,13 @@ class User(models.Model):
     date_created = models.DateField(auto_now_add=True)
     def __str__(self):
         return self.username
+
+class Alert(models.Model):
+    status = models.IntegerField(default=0) #1 Activado y 0 desactivado
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.status
     
 
 
