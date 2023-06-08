@@ -32,7 +32,7 @@ class Person(models.Model):
     
 class User(models.Model):
     username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=300)
     person = models.ForeignKey(Person, on_delete = models.CASCADE)
     rol = models.IntegerField(default=0)
     date_created = models.DateField(auto_now_add=True)
