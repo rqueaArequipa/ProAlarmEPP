@@ -11,6 +11,7 @@ class Machinery(models.Model):
     date_maintenance = models.DateField('date maintenance')
     status = models.CharField(max_length=100)
     type_engine = models.CharField(max_length=100)
+    img = models.CharField(max_length=250)
     
     def __str__(self):
         return self.type_machinery
@@ -24,18 +25,19 @@ class Person(models.Model):
     date_birth = models.DateField()
     address = models.CharField(max_length=50)
     certifications = models.CharField(max_length=200)
-    rol = models.CharField(max_length=50)
+    rol = models.IntegerField(default=0)
     machinery = models.ForeignKey(Machinery, on_delete=models.CASCADE, blank=True, null=True)
     
     def __str__(self):
         return self.name
     
 class User(models.Model):
-    username = models.CharField(max_length=50)
+    username = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=200)
     person = models.ForeignKey(Person, on_delete = models.CASCADE)
     rol = models.IntegerField(default=0)
     date_created = models.DateField(auto_now_add=True)
+    avatar = models.CharField(max_length=250)
     def __str__(self):
         return self.username
 
