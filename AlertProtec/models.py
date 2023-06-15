@@ -11,7 +11,7 @@ class Machinery(models.Model):
     date_maintenance = models.DateField('date maintenance')
     status = models.CharField(max_length=100)
     type_engine = models.CharField(max_length=100)
-    img = models.CharField(max_length=250)
+    img = models.CharField(max_length=250, blank=True)
     
     def __str__(self):
         return self.type_machinery
@@ -37,7 +37,7 @@ class User(models.Model):
     person = models.ForeignKey(Person, on_delete = models.CASCADE)
     rol = models.IntegerField(default=0)
     date_created = models.DateField(auto_now_add=True)
-    avatar = models.CharField(max_length=250)
+    avatar = models.CharField(max_length=250, blank=True)
     def __str__(self):
         return self.username
 
