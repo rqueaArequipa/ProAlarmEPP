@@ -90,13 +90,34 @@ WSGI_APPLICATION = 'ProAlarmEPP.wsgi.application'
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}'''
+}
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
+}'''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django_firebase_db.firebase',
+        'NAME': 'proalarmepp',
+        'SERVICE_ACCOUNT_KEY': {
+            "type": "service_account",
+            "project_id": "proalarmepp",
+            "private_key_id": "e5538d31290b0d44edf6e3d6e69531e1b786fef7",
+            "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCEUiXIzWDXpYhI\n4bKzbWnpG5K4GXquFm6dj+cGY8diMVp+1+PsOVrR0lp4JnhfYI81lD5DObUb5nos\nrmxCFONz6pDMhcBw1rPviDOaj/f3UQyPOhPC41PCMFcMuK2wsjlTsz/p7wM2+ZSn\nOSmfmtQb2nQVo62tJSJ9P87F/+l/KoWmV1i/AtbkaUHz75GoQ7a7JVQXBTAIVj+T\nKZ9693Lt8x+7Rw+yYKvHitQQaEjY/TMykMAufYmB6ncjbxJ6zxBDHF89/AjdYqHv\nh9wepKDim5UuF0l5De7UEo6v7YUal+M1MboiHooyBfQUdtFJcbH7aBZCCtzykfrO\nK33Azu0lAgMBAAECggEAKfsIGteyIGjXvsvAjvWpMvh5CainyAC88odb1Cam9OvU\nmsay/NjLjCNRaapG6Xewp96TDHAMGkB6xZ9HIIYRDc8/Rmwu/H3Z06aiPKjtko0n\nz28tItlN0x/UFminTpaU4o3NutIGcpQnihB0OLt+DSI3T0BBU1wjP5qVZzNEqP/n\nYvplzUpuliMGi+bleNM4JkPoFR+I2zZAG5/8qpIEhNNWZ0WRZqGhCM8nHRZ+7QRD\nVzSkO6BxyXf8OI3hDTnWujq01oK2+k2hXts99Krs3RNk16HOmaEvYv80YJskRakX\nzlVzdmOqVVTF0ok9Sr6DkbYMKmNK1Nd4gzHYK08u1wKBgQC4QGAZOeiIFTYKvgri\nBjct1VLALliXSl42PvLhlcKU0Sy/LjUkXUy6B+PRKYg5kvL46LoQEblFoGzZiA9g\n/fzVjqLlQSm0msWJCLHSy8XTat53e/sRmCoeY7R8o/4SYENAgejrLDTWp25/8x8g\nt5ZCB+CKk6U2TneYm1QUinh3QwKBgQC32O1Fl/lxLxqh2lpybs2zOh9/63YiWgrV\nR+zXPTlDD76JpDYELP7SIcDOYz0dVXofQe2lCMgpux3X6Rlb5HEDZ3mqoVEzHAz8\n35B7OW9XKqY4/Do4V0k3e6s7b6nTFcSwTMuI9kGNQ1PjkESW7hCrzc9Qh0UG+cRk\nLDNorlI/dwKBgErqaeh34jNKpJGTmesy6caqAR6A+aZyJ4JY7/qHIPnPXylQyWzC\nvsq5IIlQIMKAHGjWf6i+/BzyUK/WIaKnQuE2QMeESkfT0lOYhG0YS5Rd1JyyfXA2\n9ZErqxwutcSU/WNCLwlIDSfmJgjCOrrbyq2IdGUECV3eY8RaC8LaVobvAoGADnSX\nC27MpTKf9HP3wqGluN7sFSHNcxwDWAvEupPMydIWGDp6KM/k5V7UCyZQatsKtCR5\n7A0JuAZHbW+dl9UZcbwUG+99M/iTqNpnQNkeQQtQcJCcf0uVrTAjIZRBFSDUC0yu\ngEFknBfcI7t3OSrU0r1m/Jz2N3syDvJOxH9YZjcCgYBQ0Q+gDdgGW9JeJo5sbPpE\n3trSEcyyoOm4RZYh5gaGgfftf8PtR83gSn4JDU7EnMSNBp8Pxhfn5jf6f+vR0+wx\nVDwAKnmoGmwD4Aur5quFwwExhuquf1EmfFh9TlBPM8iNP4HRmSipTJ44emZ7T9Oj\nOy+Cw3qToC975+R6OD/n+w==\n-----END PRIVATE KEY-----\n",
+            "client_email": "firebase-adminsdk-7qo2v@proalarmepp.iam.gserviceaccount.com",
+            "client_id": "109148048311575408356",
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+            "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7qo2v%40proalarmepp.iam.gserviceaccount.com",
+            "universe_domain": "googleapis.com"
+        }
+    }
 }
+
 
 
 # Password validation
