@@ -90,15 +90,15 @@ WSGI_APPLICATION = 'ProAlarmEPP.wsgi.application'
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}'''
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
-}'''
+}
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django_firebase_db.firebase',
         'NAME': 'proalarmepp',
@@ -117,7 +117,7 @@ DATABASES = {
         }
     }
 }
-
+'''
 
 
 # Password validation
