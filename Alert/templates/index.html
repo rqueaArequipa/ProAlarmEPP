@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Hello Django on Render!</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {%load static %}
+    <link rel="icon" href="https://raw.githubusercontent.com/rqueaArequipa/Portfolio-QJDeveloper/main/img/logo.png?token=GHSAT0AAAAAACBNB74QY5JB4NV7UI7WRYBSZFLZI6Q">
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <title>ProAlarmEpp
+    </title>
 </head>
-
 <body>
-    <main class="container">
-        <div class="row text-center justify-content-center">
-            <div class="col">
-                <h1 class="display-4">Hello World!</h1>
+    <!-- SECCION INICIO -->
+    <section class="inicio">
+        <div class="fondo-cielo"></div>
+        <div class="fondo-img"></div>
+        <div class="contenido-seccion">
+            <header>
+                <nav>
+                    <a href="#">
+                        <i class="fa-solid fa-mountain"></i>
+                        ProAlarmEpp
+                    </a>
+                    <a href="/api">Api Rest</a>
+                    <a href="/admin">Acceder</a>
+                </nav>
+            </header>
+            <div class="titulo efecto1">
+                Pro Alarm
             </div>
         </div>
-    </main>
-</body>
+    </section>
 
+
+    <!-- SECCION SURFING -->
+    <section class="surfing" id="surfing">
+        <h2 class="titulo posicion efecto3">
+            work
+        </h2>
+    </section>
+
+    <!-- SECCION ES HORA -->
+    <section class="esahora" id="esahora">
+        <h2 class="titulo color efecto4">Es ahora</h2>
+        <div class="redes">
+            <a href="https://www.facebook.com/qjcoders"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@QJCoders"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/coders.qj/"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+    </section>
+
+    <script src="{% static 'app.js' %}"></script>
+</body>
 </html>
