@@ -45,7 +45,7 @@ class Alert(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.status
+        return str(self.status)
     
 class Device(models.Model):
     token = models.CharField(max_length=255, unique=True)
