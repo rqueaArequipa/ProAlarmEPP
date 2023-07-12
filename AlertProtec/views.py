@@ -9,16 +9,16 @@ class MachineryViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = MachinerySerializer
     filter_backends =[DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['id', 'type_machinery']
-    search_fields = ['id', 'type_machinery']
+    filterset_fields = '__all__'
+    search_fields = '__all__'
     
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = PersonSerializer
     filter_backends =[DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['id', 'name']
-    search_fields = ['id', 'name']
+    filterset_fields = '__all__'
+    search_fields = '__all__'
     
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -33,8 +33,8 @@ class AlertViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = AlertSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['id', 'status']
-    search_fields = ['id', 'status']
+    filterset_fields = '__all__'
+    search_fields = '__all__'
     
 class DeviceViewSet(viewsets.ModelViewSet):
     queryset = Device.objects.all()
