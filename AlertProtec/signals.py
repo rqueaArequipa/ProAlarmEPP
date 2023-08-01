@@ -7,7 +7,7 @@ from pyfcm import FCMNotification
 def enviar_notificacion(sender, instance, created, **kwargs):
     if instance.status == 1:
         # Configura la clave del servidor de FCM
-        fcm_key = "AAAAWblBfkw:APA91bHKWkzBxN22lCOLr6AB2ossG0_RIz-VsZa1JKkGeNLPTs-fjDwslOXK_Ixb0H-EmWL4jj6tra7eRwJrca9W6DdfkzR4xG6nAlanaAxe-tSK1fMacJkBHHn78XxQne5PQdvjHIZR"
+        fcm_key = "KEY_FIREBASE"
 
         # Crea una instancia de FCMNotification con la clave del servidor
         fcm = FCMNotification(api_key=fcm_key)
